@@ -5,6 +5,6 @@ stream.on('closed', () => {
   console.log('stream is closed')
 })
 stream.on('connected', () => {
-  console.log('stream is connected')
+  console.log('stream is connected', stream.uuid)
 })
 stream.connect()
