@@ -1,9 +1,12 @@
 const handler = function (params) {
   return new Promise((resolve, reject) => {
     setTimeout(function () {
-      resolve({data: true})
-    }, 1000)
+      reject(new Error('error 418'))
+    }, 500)
   })
 }
 
-module.exports = handler
+module.exports = {
+  name: 'BasicRejectService',
+  handler
+}
